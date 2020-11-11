@@ -1,6 +1,23 @@
 Class Fantasy Football
-Point Breakdown
-Total Points
+ Def Point Breakdown
+   """This function will return a tally of each point players make and for what reason.
+         Returns Floats:
+            Recept for Reception
+            Yard for yards
+            Touchdowns  for touchdown 
+            FG for field goal
+            F for Fumble 
+            Intercept for Interception"""
+ Def Total Points
+    """This function will show the updated total number of points earned from all games played throughout the season will be shown at the end of each game in addition total games 
+             Returns Floats:
+             Total Recept for total number receptions 
+             Total Yard for total number of yards
+             Total Touchdowns for total number of touchdown 
+             Total FG for total number of field goal
+             Total F for total number of Fumble 
+             Total Intercept for total number of Interception"""
+
 Total Yards
  """Shows the total yards completed by each player.
     
@@ -11,8 +28,24 @@ Total Yards
         returns a string that states the conversion between 12 
         hour time to 24 hour.
     """
-Wins/Loses
-Standings
+Wins/Loses:
+ """Indicates who won the football game
+
+    Returns:
+        String:  W for win, L for loss, and T for tie
+    """
+
+Team Standings
+ """Updates the teams records after every week.  
+    Args: 
+        Team Name(dictionary): has every team name 
+        Week # (int) : keeps track of what week number we are on
+        Wins (int): number of wins each team has at that week
+        Loss(int) : number of loses each team has at that week
+        Tie(int) : number of ties each team has at that week
+    Returns:
+        String: “The {Team Name} has a record of {wins} - {tie} - {loses}"
+    """
 Championships Won
 """Shows the players who have won a Championship.
 
