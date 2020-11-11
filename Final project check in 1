@@ -1,6 +1,23 @@
 Class Fantasy Football
-Point Breakdown
-Total Points
+ Def Point Breakdown
+   """This function will return a tally of each point players make and for what reason.
+         Returns Floats:
+            Recept for Reception
+            Yard for yards
+            Touchdowns  for touchdown 
+            FG for field goal
+            F for Fumble 
+            Intercept for Interception"""
+ Def Total Points
+    """This function will show the updated total number of points earned from all games played throughout the season will be shown at the end of each game in addition total games 
+             Returns Floats:
+             Total Recept for total number receptions 
+             Total Yard for total number of yards
+             Total Touchdowns for total number of touchdown 
+             Total FG for total number of field goal
+             Total F for total number of Fumble 
+             Total Intercept for total number of Interception"""
+
 Total Yards
  """Shows the total yards completed by each player.
     
