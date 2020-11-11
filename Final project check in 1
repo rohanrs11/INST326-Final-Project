@@ -2,6 +2,21 @@ Class Fantasy Football
 Point Breakdown
 Total Points
 Total Yards
-Wins/Loses
-Standings
+Wins/Loses:
+    "Indicates who won the football game"
+
+    Returns:
+        String:  W for win, L for loss, and T for tie
+
+Team Standings
+        "Updates the teams records after every week.  "
+    Args: 
+        Team Name(dictionary): has every team name 
+        Week # (int) : keeps track of what week number we are on
+        Wins (int): number of wins each team has at that week
+        Loss(int) : number of loses each team has at that week
+        Tie(int) : number of ties each team has at that week
+    Returns:
+        String: “The {Team Name} has a record of {wins} - {tie} - {loses}”
+
 Championships Won
