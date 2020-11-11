@@ -14,3 +14,9 @@ Total Yards
 Wins/Loses
 Standings
 Championships Won
+"""Shows the players who have won a Championship.
+
+    Returns:
+        returns a string that states lists the players that 
+        have won championships
+    """
