@@ -22,11 +22,11 @@ Total Yards
  """Shows the total yards completed by each player.
     
     Args: 
-        time: 24 hour time to convert.
+        total_yards: total yards covered by player.
         
     Returns:
-        returns a string that states the conversion between 12 
-        hour time to 24 hour.
+        returns a string that shows total yards completed by 
+        each player
     """
 Wins/Loses:
  """Indicates who won the football game
