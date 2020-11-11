@@ -1,4 +1,5 @@
 Class Fantasy Football
+"""A fantasy football game can be played by any user or computer"""
  Def Point Breakdown
    """This function will return a tally of each point players make and for what reason.
          Returns Floats:
