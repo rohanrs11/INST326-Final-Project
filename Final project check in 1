@@ -2,6 +2,15 @@ Class Fantasy Football
 Point Breakdown
 Total Points
 Total Yards
+ """Shows the total yards completed by each player.
+    
+    Args: 
+        time: 24 hour time to convert.
+        
+    Returns:
+        returns a string that states the conversion between 12 
+        hour time to 24 hour.
+    """
 Wins/Loses
 Standings
 Championships Won
