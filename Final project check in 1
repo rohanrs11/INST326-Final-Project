@@ -43,3 +43,94 @@ class Ship:
         """draws the player ship"""
         pygame.draw.rect(window, (0,255,0), (self.pos_x, self.pos_y, 40, 40), 5)
 
+#class Player(Ship):
+    """This is the player class that will take the attributes from the ship Class.  
+    This class will have all the functions a player ship can do """
+    #def __init__(self, pos_x, pos_y, health=1000):
+    
+    #def draw(self, window):
+    """This allows for a health bar to be drawn on the player ship 
+        Args:
+            window(window): the screen in which the game will be played on.
+        """
+    
+    #def healthbar(self, window):
+    """This creates the physically creates the player ships health bar 
+        Args:
+            window(window): the screen in which the game will be played on.
+        """
+    #def scoreboard(self, points)
+    """This creates a scoreboard that logs the top 10 point scorers and 
+        removes scores once they are beat.  We will read and write to a file to 
+        save these top scores
+        Args:
+            points(int): Keeps track of the number of points you get before the game ends
+        """
+
+    #def move_attacks(self, speed, objects):
+    """This will allow for the player ship to attack enemies.
+        Args:
+            speed(int): the speed at which the attacks are moving
+            objects(enemies): the enemies on the board
+            """
+
+#class Enemy(Ship):
+    """This is the enemy class that will take the attributes from the ship Class.  
+    This class will have all the functions an enemy ship can do """
+    #def __init__(self, pos_x, pos_y, health=1000):
+        
+    #def move(self, speed)
+    """this will show how the enemy ships are able to 
+        move down (zigzag pattern instead of normally going straight downwards.)
+        Args:
+            speed(int): how fast the enemy is able to move
+        """
+    #def shoot(self):
+    """This will show how enemy ships are able to attack """
+
+
+def main():
+    run = True
+    frames_per_sec = 60
+    life = 10
+    lvl = 1
+    font = pygame.font.SysFont("arial", 20)
+    player_speed = 100
+    ship = Ship(500, 500)
+
+    clock = pygame.time.Clock()
+
+
+    def redraw_window():
+        window.blit(background, (0,0))
+        #draw text to stay on background
+        label_level = font.render(f"Level: {lvl}", 1, (255, 255, 255))  #rbg color codes
+        label_life = font.render(f"Lives: {life}", 1, (255,255,255))
+
+        window.blit(label_level, (10, 40))
+        window.blit(label_life, (10, 10))
+
+        ship.draw(window)
+
+        pygame.display.update()
+
+    while run:
+        clock.tick(frames_per_sec)
+        redraw_window()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT]:
+            ship.pos_x -= player_speed and ship.pos_x - player_speed > 0
+        if keys[pygame.K_RIGHT]:
+            ship.pos_x += player_speed and ship.pos_x + player_speed < width
+        if keys[pygame.K_DOWN]:
+            ship.pos_y += player_speed and ship.pos_y + player_speed < height
+        if keys[pygame.K_UP]:
+            ship.pos_y -= player_speed and ship.pos_y - player_speed > 0
+
+main()
+
